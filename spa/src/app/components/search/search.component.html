@@ -1,0 +1,15 @@
+<h1>Buscador : <small>{{ termino }}</small></h1>
+<hr>
+
+<div class="alert alert-primary animated fadeIn fast" role="alert" *ngIf="filterHeroe.length == 0">
+    No se encontraron coincidencias para el termino: {{ termino }}
+</div>
+
+<div class="card-columns">
+
+
+    <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.index" *ngFor="let heroe of filterHeroe;">
+
+    </app-heroe-tarjeta>
+
+</div>
